@@ -1,12 +1,6 @@
 import os
-
-import pdfplumber
-import pdf2image
 import docx
-import pptx
 from docx.shared import Pt
-from docx.shared import Inches, Cm
-from PIL import Image
 from pptx import Presentation
 import tkinter as tk
 from tkinter import filedialog
@@ -14,7 +8,7 @@ from pathlib import Path
 
 def valid_xml_char_ordinal(c):
     '''
-
+    Checks if the character is a valid xml character
     :param c: one-string character to convert
     :return: true if the character's unicode is valid_xml, false if not
     '''
