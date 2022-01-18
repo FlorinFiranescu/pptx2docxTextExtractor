@@ -93,20 +93,11 @@ if not(pptToScan):
 
 nameOfDoc = Path(pptToScan).stem
 parentDirectory = Path(pptToScan).parent
-
-
-
 doc = docx.Document()
-style = doc.styles['List Bullet']
-font = style.font
-font.size = Pt(14)
 docxToSave = f"{parentDirectory}/{nameOfDoc}.docx"
-print(docxToSave)
-print(pptToScan)
-fileType = "pptx"
 
 prs = Presentation(pptToScan)
-text = ""
+
 it = 0
 for slide in prs.slides:
     it = it + 1
