@@ -63,13 +63,14 @@ def paragraphStyleSwitcher(docParagraph, pptParagraphLevel):
         3: 'List Bullet 3'
     }
     fontSizeSwitcher = {
-        0: Pt(16),
-        1: Pt(15),
-        2: Pt(14),
-        3: Pt(13)
+        0: Pt(12),
+        1: Pt(12),
+        2: Pt(12),
+        3: Pt(12)
     }
     docParagraph.style = styleSwitcher.get(pptParagraphLevel, 'Normal')
     font = docParagraph.style.font
+    font.name = "Times New Roman"
     font.size = fontSizeSwitcher.get(pptParagraphLevel, Pt(13))
 
 
